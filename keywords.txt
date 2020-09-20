@@ -1,0 +1,21 @@
+# Syntax Coloring Map For fxBargraph
+
+# Datatypes (KEYWORD1)
+
+fxBargraph	KEYWORD1
+fxBargraphFine	KEYWORD1
+fxBargraphHighres	KEYWORD1
+fxBargraphThin	KEYWORD1
+fxBargraphLine	KEYWORD1
+
+# Methods and Functions (KEYWORD2)
+
+setValue KEYWORD2
+setLineWidth KEYWORD2
+setMaxValue KEYWORD2
+setClearCharacter KEYWORD2
+setRight2Left KEYWORD2
+
+# Instances (KEYWORD2)
+
+# Constants (LITERAL1)
