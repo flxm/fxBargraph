@@ -1,8 +1,5 @@
 #include "fxBargraph.h"
 
-#define CHAR_COLS 5
-#define CHAR_ROWS 8
-
 fxBargraph::fxBargraph(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, byte width, int max, byte clr, bool rtl)
   : lcd(lcd), val(0), x(x), y(y), id(id), width(width), maxval(max), clr(clr), rtl(rtl) {
   lastval = -1;
