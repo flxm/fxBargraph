@@ -61,4 +61,11 @@ class fxBargraphHighres : public fxBargraph {
     virtual void createFraction(byte frac);
 };
 
+class fxBargraphThin : public fxBargraph {
+  public:
+    fxBargraphThin(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, byte width, int max, byte clr=' ', bool rtl=false);
+   
+  protected:
+    virtual void createFraction(byte frac);
+};
 
