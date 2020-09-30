@@ -3,7 +3,7 @@
 fxBargraph::fxBargraph(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, byte width, int max, byte clr, bool rtl)
   : lcd(lcd), val(0), x(x), y(y), id(id), width(width), maxval(max), clr(clr), rtl(rtl) {
   lastval = -1;
-  lastnum = 0;
+  lastnum = width;
   steps = 1;
   fullchar = 255;
 }
@@ -44,7 +44,7 @@ void fxBargraph::draw() {
 
   // Clear remaining space
     if (num <= lastnum) {
-      for (byte i=num+(frac==0?0:1); i<width; i++)
+      for (byte i=num+(frac==0?0:1); i<min(lastnum+1, width); i++)
         lcd.printByte(clr);
     }
   }
@@ -54,3 +54,4 @@ void fxBargraph::draw() {
   lastval = val;
   lastnum = num;
 }
+
