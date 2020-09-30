@@ -8,11 +8,11 @@ fxBargraphFine::fxBargraphFine(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, 
 void fxBargraphFine::createFraction(byte frac) {
   // Create fractional custom character
   byte dyn[CHAR_ROWS];
-  byte x;
-  if (rtl) x = (0b11111100 << frac) >> 8;
-  else x = 0b11111000000 >> frac;
+  byte pattern;
+  if (rtl) pattern = (0b11111100 << frac) >> 8;
+  else pattern = 0b11111000000 >> frac;
   for (int row=0; row<CHAR_ROWS; row++)
-      dyn[row] = x;
+      dyn[row] = pattern;
   lcd.createChar(id, dyn);
 }
 

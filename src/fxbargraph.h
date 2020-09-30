@@ -1,5 +1,4 @@
-#ifndef fxBargraph_h
-#define fxBargraph_h
+#pragma once
 
 #include <arduino.h>
 #include <LiquidCrystal_I2C.h>
@@ -35,12 +34,13 @@ class fxBargraph {
     byte x;
     byte y;
     byte width;
+ 
     byte clr;
-
+    byte fullchar;
     byte lastnum;
     byte steps;
+
     bool rtl;
-    byte fullchar;
 };
 
 
@@ -61,4 +61,4 @@ class fxBargraphHighres : public fxBargraph {
     virtual void createFraction(byte frac);
 };
 
-#endif
+
