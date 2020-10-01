@@ -69,3 +69,35 @@ class fxBargraphThin : public fxBargraph {
     virtual void createFraction(byte frac);
 };
 
+/**
+ * Requires 2 custom characters!
+ */
+class fxBargraphLine : public fxBargraph {
+  public:
+    fxBargraphLine(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, byte width, int max, byte clr=' ', bool rtl=false);
+   
+    virtual void setLineWidth(byte width);
+
+    virtual void setLinePattern(byte mask);
+
+  protected:
+    virtual void createFraction(byte frac);
+
+    byte mask;
+};
+
+/**
+ * Requires 2 custom characters!
+ */
+class fxBargraphDot : public fxBargraph {
+  public:
+    fxBargraphDot(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, byte width, int max, byte clr=' ', bool rtl=false);
+
+  protected:
+    virtual void setLinePattern(byte mask);
+  
+    virtual void createFraction(byte frac);
+
+    byte mask;
+};
+
