@@ -1,0 +1,13 @@
+{
+  "name": "fxBargraph",
+  "keywords": "display, lcd, io, progress, bargraph",
+  "description": "Flexible LCD bargraph library for Arduino",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/flxm/fxBargraph",
+    "branch": "master"
+  },
+  "frameworks": "arduino",
+  "platforms": "*"
+}
