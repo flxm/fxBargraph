@@ -101,3 +101,28 @@ class fxBargraphDot : public fxBargraph {
     byte mask;
 };
 
+/**
+ * Requires 2 custom characters!
+ */
+class fxBargraphStriped : public fxBargraph {
+  public:
+    fxBargraphStriped(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, byte width, int max, byte clr=' ', bool rtl=false);
+
+  protected:
+    virtual void setLinePattern(byte mask);
+      
+    virtual void createFraction(byte frac);
+};
+
+/**
+ * 
+ */
+class fxBargraphVertical : public fxBargraph {
+  public:
+    fxBargraphVertical(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, byte width, int max);
+
+  protected:
+    virtual void createFraction(byte frac);
+};
+
+
