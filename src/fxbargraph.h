@@ -24,7 +24,7 @@ class fxBargraph {
     virtual void createFraction(byte frac);
 
   protected:
-    const LiquidCrystal_I2C& lcd;
+    LiquidCrystal_I2C& lcd;
 
     int val;
     int maxval;
