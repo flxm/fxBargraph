@@ -2,7 +2,7 @@
 
 **Flexible LCD bargraph library for Arduino**
 
-![License: MIT](https://img.shields.io/github/license/flxm/ioBroker.netio)
+![License: MIT](https://img.shields.io/github/license/flxm/fxBargraph)
 
 
 ## Purpose
@@ -25,7 +25,6 @@ fxBargraph bar(lcd, 0, 0, 16, 0, 1023);
 
 void setup() {
   pinMode(A0, INPUT);
-  lcd.init();
   lcd.begin();
 }
 
