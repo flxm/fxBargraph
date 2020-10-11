@@ -1,6 +1,6 @@
 #include "fxBargraph.h"
 
-fxBargraphHighres::fxBargraphHighres(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, byte width, int max, byte clr=' ')
+fxBargraphHighres::fxBargraphHighres(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, byte width, int max, byte clr)
   : fxBargraph(lcd, x, y, id, width, max, clr) {
     steps = CHAR_COLS*CHAR_ROWS;
 }

@@ -1,6 +1,6 @@
 #include "fxBargraph.h"
 
-fxBargraphFine::fxBargraphFine(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, byte width, int max, byte clr=' ', bool rtl=false)
+fxBargraphFine::fxBargraphFine(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, byte width, int max, byte clr, bool rtl)
   : fxBargraph(lcd, x, y, id, width, max, clr, rtl) {
     steps = CHAR_COLS + 1; // bridge inter-character gap
 }
