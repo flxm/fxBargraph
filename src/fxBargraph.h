@@ -16,10 +16,10 @@ class fxBargraph {
   public:
     fxBargraph(LiquidCrystal_I2C& lcd, byte x, byte y, byte id, byte width, int max, byte clr=' ', bool rtl=false);
 
-    virtual void setValue(int newval);
+    virtual bool setValue(int newval);
 
   protected:
-    virtual void draw();
+    virtual bool draw();
 
     virtual void createFraction(byte frac);
 
@@ -38,8 +38,9 @@ class fxBargraph {
     byte clr;
     byte fullchar;
     byte lastnum;
-    byte steps;
+    byte lastfrac;
 
+    byte steps;
     bool rtl;
 };
 
